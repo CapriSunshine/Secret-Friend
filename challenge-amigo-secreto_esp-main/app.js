@@ -3,6 +3,7 @@
 
 let friends = [];
 listaAmigos.innerHTML = ""
+console.log(friends.lenght);
 
 //Funcion que añade amigos con el botón y va añadiendo la lista.
 function addFriend() {
@@ -10,6 +11,7 @@ function addFriend() {
     if (newFriend !="") {
     friends.push(newFriend);
     console.log(friends);
+    console.log(friends.length);
 } else { 
         alert("Por favor, inserte un nombre");
     }
@@ -25,11 +27,22 @@ function listfriends(){
 }
 }
 
-
-let randomNum = Math.floor(Math.random() * 10);
-console.log(randomNum);  // Número entre 0 y 9
-
 //Funcion que limpia el imput.
 function clean () {
     document.getElementById("amigo").value = ""; 
 }
+
+//Función que sortea el amigo
+function secretFriend (){
+    if (friends.length >= 1) {
+        let randomFriend = Math.floor(Math.random() * friends.length);
+        console.log(randomFriend);
+    let winner = document.getElementById("resultado");
+    winner.innerHTML = friends[randomFriend-1];
+    } else { 
+        alert("Por favor, inserte los nombres de sus amigos");
+    }
+}
+
+//Falta ver lo de lista inicial vacia y como 
+//evitar se introduscan espacios
