@@ -20,7 +20,7 @@
         <section class="input-section">
             <h2 class="section-title">Digite el nombre de sus amigos</h2>
             <div class="input-wrapper">
-                <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
+                <input type="text" id="amigo" class="input-name" onkeyup = "if(event.keyCode == 13) addFriend()" placeholder="Añade un nombre">
                 <button class="button-add" onclick="addFriend()">Añadir</button>
             </div>
            
