@@ -37,7 +37,7 @@ function secretFriend (){
         let randomFriend = Math.floor(Math.random() * friends.length);
         console.log(randomFriend);
     let winner = document.getElementById("resultado");
-    winner.innerHTML = friends[randomFriend-1];
+    winner.innerHTML = `El amigo secreto es "${friends[randomFriend]}"! `;
     } else { 
         alert("Por favor, inserte los nombres de sus amigos");
     }
